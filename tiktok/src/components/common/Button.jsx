@@ -1,8 +1,8 @@
 import {Link} from "react-router-dom";
 
 function Button({
-    to, href, onClick, primary, children, 
-    small, large, text, disabled, rounded, 
+    to, href, onClick, children, hover,
+    small, large, text, disabled, rounded, leftIcon, 
     ...pasprops}
     ) 
     {
@@ -37,8 +37,9 @@ function Button({
         ${text ? 'hover:underline' : ''}
         ${small ? 'min-w-[88px] py-[4px] px-[16px]' : ''}
         ${large ? 'min-w-[140px] py-[14px] px-[16px]' : ''}
-        ${primary ? 'bg-[#ff0050] text-white rounded-xl' : ''}`
+        ${hover ? 'hover:bg-[#e0d7daf0] w-full hover:border-[#efc1d1] rounded-xl' : ''}`
        }>
+        {leftIcon && <span className="mr-2 text-xl">{leftIcon}</span>}
         {children}
        </Comp>
      );

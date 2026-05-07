@@ -3,7 +3,7 @@ import RightPanel from "./RightPanel";
 
 function MainLayout() {
     return ( 
-        <div className="container mx-auto flex justify-between">
+        <div className="container mx-auto px-10 flex justify-between">
             <div className="">
                 <SideBar />
             </div>
