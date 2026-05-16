@@ -1,8 +1,16 @@
+import MenuSidebar from "./MenuSidebar";
+import SuccessAcounts from "./SuccessAcounts";
+import FollowingAccounts from "./FollowingAccounts";
 function SideBar() {
     return ( 
+      <>
         <div className="w-[20vw]">
-           <h1>This is the Sidebar</h1>
+           <MenuSidebar />
+           <SuccessAcounts />
+           <FollowingAccounts />
         </div>
+      </>
+      
      );
 }
 

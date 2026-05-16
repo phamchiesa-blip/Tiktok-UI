@@ -1,5 +1,20 @@
 @import "tailwindcss";
 
+html *::-webkit-scrollbar {
+    border-radius: 0;
+    width: 8px;
+}
+
+html *::-webkit-scrollbar-thumb {
+    border-radius: 4px;
+    background-color: rgba(0,0,0,0.15);
+}
+
+html *::-webkit-scrollbar-track {
+    border-radius: 0;
+    background-color: rgba(0,0,0,0);
+}
+
 .wrapper {
     width: 100%;
     max-height: min((100vh - 96px) - 60px, 734px);
@@ -31,6 +46,18 @@
     cursor: pointer;
 }
 
+.sidebar-btn {
+    min-width: 3px;
+    font-size: 12px;
+    font-weight: 600;
+    padding: 3px 16px 5px 16px;
+    cursor: pointer;
+    background-color: red;
+    border-radius: 20px;
+    color: white;
+    cursor: pointer;
+}
+
 // đứng cạnh nhau thì cách nhau 8px
 + .wrapper-btn {
     margin-left: 8px;
@@ -39,6 +66,14 @@
 .avatar {
     width: 40px;
     height: 40px;
+    border-radius: 50%;
+    margin-right: 12px;
+    object-fit: cover;
+}
+
+.sidebarAvatar {
+    width: 30px;
+    height: 30px;
     border-radius: 50%;
     margin-right: 12px;
     object-fit: cover;
@@ -59,4 +94,9 @@
     font-size: 1.4 rem;
 }
 
-
+.sidebarHover:hover {
+    background-color: rgba(22, 24, 35, 0.03);
+    border-radius: 10px;
+    color: gray;
+    transition: background-color ease-in-out 200ms;
+}

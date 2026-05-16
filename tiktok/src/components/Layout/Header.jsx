@@ -6,7 +6,7 @@ import HeadlessTippy from "@tippyjs/react/headless";
 import 'tippy.js/dist/tippy.css'; // optional for styling
 import Wrapper from "./Popper/Wrapper";
 import AccountItem from "../common/AccountItem";
-import Button from "../common/Button";
+
 import Menu from "./Popper/Menu";
 import useDebounce from '../../hooks/useDebounce'
 import { Link } from "react-router-dom";
@@ -67,7 +67,7 @@ function Header() {
 
     return (
         <header>
-            <div className="border-t-2 border-b-1 border-[#c7bfbf] h-[70px]">
+            <div className="border-b-1 border-[#c7bfbf] h-[70px]">
                 <div className="container mx-auto px-10 h-full flex items-center justify-between">
                     <Link to="/" className="block shrink-0">
                         <img src={logo} alt="TikTok" className="w-40 h-auto" />
@@ -93,7 +93,8 @@ function Header() {
                         >
                             <input ref={inputRef}
                             type="text" placeholder="Search accounts and videos" spellCheck={false}
-                            className="w-[25vw] rounded-full bg-gray-100 px-4 py-2 pr-10 outline-none ring-1 ring-transparent text-stone-500
+                            // pr-22 để khi gõ text dài thì không đè lên icon dấu X và icon kính lúp
+                            className="w-[25vw] rounded-full bg-gray-100 px-4 py-2 pr-22 outline-none ring-1 ring-transparent text-stone-500
                             transition-all duration-200 focus:ring-2 focus:ring-gray-300 focus:ring-offset-2 focus:ring-offset-white
                             " 
                             value={searchTerm} onChange={handleChange} 
@@ -141,18 +142,13 @@ function Header() {
                     {currentUser ? (
                         <Menulogin setCurrentUser={setCurrentUser} />
                     ) : (
-                         <div>
-                        <Button onClick={() => setCurrentUser(true)} 
-                        text>
-                            Upload
-                        </Button>
-                       
-                       <button className="bg-red-600 text-white rounded-xl py-2 px-4 text-2xl font-semibold cursor-pointer hover:bg-[#ff0050] transition-colors duration-200"
+                    <div className="-mr-[63px]">
+                       <button className="bg-red-600 text-white rounded-xl py-2 px-3 text-xl font-semibold cursor-pointer hover:bg-[#ff0050] transition-colors duration-200"
                        onClick={() => setCurrentUser(true)}>
                         Log in
                        </button>
                         <Menu />
-                        </ div>
+                    </div>
                     )
                     }
                 </div>
