@@ -102,7 +102,7 @@ const SuccessAcounts = () => {
                 render={(attrs) => (
                     <div className="w-[18vw] p-3 bg-sky-50 rounded-2xl shadow-lg" tabIndex="-1" {...attrs}>
                                 <div className="flex justify-between">
-                                    <img src="https://img-cache.coccoc.com/image2?i=2&l=85/149530955" alt="avatar" className="sidebarAvatar" />
+                                    <img src="/7ta.jpg" alt="avatar" className="sidebarAvatar" />
                                     <button onClick={handleFollow}
                                     className="sidebar-btn">{follow}</button>
                                 </div>
@@ -120,7 +120,7 @@ const SuccessAcounts = () => {
                         )} 
             >
                 <div className="wrapper-account hover:bg-[#f8f8f8]">
-                        <img src="https://img-cache.coccoc.com/image2?i=2&l=85/149530955" alt="avatar" className="sidebarAvatar" />
+                        <img src="/7ta.jpg" alt="avatar" className="sidebarAvatar" />
         
                         <div className="infor">
                             <p className="text-[15px] font-semibold flex">

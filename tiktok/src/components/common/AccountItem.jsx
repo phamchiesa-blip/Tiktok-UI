@@ -5,7 +5,7 @@ function AccountItem({ data }) {
     return (
         <Link to={`/profile/${data.username}`} className="block">
             <div className="wrapper-account hover:bg-[#f8f8f8]">
-                <img src="bus_driver.jpg" alt="avatar" className="avatar" />
+                <img src="/bus_driver.jpg" alt="avatar" className="avatar" />
 
                 <div className="infor">
                     <p className="name flex">

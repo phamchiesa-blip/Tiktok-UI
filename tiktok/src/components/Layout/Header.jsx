@@ -67,7 +67,7 @@ function Header() {
 
     return (
         <header>
-            <div className="border-b-1 border-[#c7bfbf] h-[70px]">
+            <div className="border-b-1 border-[#c7bfbf] h-[70px] top-0">
                 <div className="container mx-auto px-10 h-full flex items-center justify-between">
                     <Link to="/" className="block shrink-0">
                         <img src={logo} alt="TikTok" className="w-40 h-auto" />
